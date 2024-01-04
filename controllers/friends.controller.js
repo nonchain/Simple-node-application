@@ -1,7 +1,11 @@
 const { friends } = require("../models/friends.model");
 
+const friendsPageParameters = {
+  title: "Friends List",
+};
+
 function getFriends(req, res) {
-  res.send(friends);
+  res.render("friends", friendsPageParameters);
 }
 
 function getFriend(req, res) {
@@ -15,16 +19,19 @@ function getFriend(req, res) {
 }
 
 function postFriend(req, res) {
+  console.log(req.body);
   if (!req.body.name)
     return res.status(400).json({
       error: "Missing name value",
     });
+
   const newFriend = {
-    name: req.body.name,
     id: friends.length + 1,
+    name: req.body.name,
   };
 
   friends.push(newFriend);
+  console.log(friends);
 
   res.json(newFriend);
 }

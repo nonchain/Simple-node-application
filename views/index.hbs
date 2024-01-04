@@ -1,10 +1,16 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{title}}</title>
-  </head>
-  <body style="font-family: sans-serif">
-    <h1>{{caption}}</h1>
-  </body>
-</html>
+<div class="home-container">
+  <div class="list-card">
+    <ul class="list-body">
+      <h1 class="list-title">
+        Friends List
+      </h1>
+      {{#each friendsList}}
+        <li class="item">
+          <p>{{name}}</p>
+        </li>
+      {{/each}}
+    </ul>
+
+  </div>
+  <a href="/friends" class="add-friend">Add new one</a>
+</div>
