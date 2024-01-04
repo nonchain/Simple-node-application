@@ -1,7 +1,7 @@
-##How to use
+## How to use
 
-###1. Clone project
+### 1. Clone project
 
-###2. Install packages using npm
+### 2. Install packages using npm
 
-###3. Run the project in dev mode (npm run dev)
+### 3. Run the project in dev mode (npm run dev)
